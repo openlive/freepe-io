@@ -1,6 +1,8 @@
 # FreePe IO
 Promo
 
-#Run
-
+#Setup
 Install OrientDB http://orientdb.com/docs/master/Tutorial-Installation.html
+
+#Run
+node app.js
