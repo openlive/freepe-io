@@ -1,2 +1,2 @@
-# freepe-io
-FreePe IO Promo
+# FreePe IO
+Promo
