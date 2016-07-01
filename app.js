@@ -34,3 +34,17 @@ app.get('/', routes.index);
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
+
+var OrientDB = require('orientjs');
+ 
+var server = OrientDB({
+  host: 'localhost',
+  port: 2424,
+  username: 'root',
+  password: 'root'
+});
+
+server.list()
+.then(function (dbs) {
+  console.log('There are ' + dbs.length + ' databases on the server.');
+});
