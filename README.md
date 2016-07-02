@@ -5,4 +5,5 @@ Promo
 Install OrientDB http://orientdb.com/docs/master/Tutorial-Installation.html
 
 #Run
-node app.js
+npm install
+npm start
