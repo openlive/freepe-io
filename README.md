@@ -8,4 +8,5 @@ $ npm install
 
 #Run
 $ ./orientdb-community-2.2.0/bin/server.sh
+
 $ npm start
