@@ -1,10 +1,10 @@
 # FreePe IO
-Promo
+Promo webapp
 
 #Setup
 Install OrientDB http://orientdb.com/docs/master/Tutorial-Installation.html
 
-#Run
-npm install
+$ npm install
 
-npm start
+#Run
+$ npm start
