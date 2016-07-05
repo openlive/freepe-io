@@ -1,18 +1,11 @@
-# Logs
-logs
-*.log
+# Logs and extra files
 npm-debug.log*
+.idea
 
-# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
+# Database directories
+/opt/orientdb-community-2.2.0/bin/orient.pid
+/opt/orientdb-community-2.2.0/log
 
 # Dependency directories
 /node_modules
-jspm_packages
-/opt
-
-# Optional npm cache directory
 .npm
