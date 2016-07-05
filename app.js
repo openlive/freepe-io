@@ -68,8 +68,26 @@ var server = OrientDB({
   password: 'root'
 });
 
-server.list() .then(function (dbs) {
-  console.log('There are ' + dbs.length + ' databases on the server.');
+var db = server.use({
+  name: 'freepe',
+  username: 'root',
+  password: 'root'
 });
+console.log('Using database: ' + db.name);
 
+//TEMPLATE TO INSERT DATA IN DATABASE
+/*db.query('insert into User (name, password, login, email) values (:name, :password, :login, :email)',
+  {
+    params: {
+      name: 'Bogdan',
+      password: '123456',
+      login: 'bnekras',
+      email: 'bnekras.pm@gmail.com'
+    }
+  }
+).then(function (response){
+  console.log(response); //an Array of records inserted 
+});*/
 
+// CLOSE THE CONNECTION AT THE END 
+db.close();
