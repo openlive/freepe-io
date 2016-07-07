@@ -1,7 +1,3 @@
-# Logs and extra files
-npm-debug.log*
-.idea
-
 # Database directories
 /opt/orientdb-community-2.2.0/bin/orient.pid
 /opt/orientdb-community-2.2.0/log
@@ -9,3 +5,8 @@ npm-debug.log*
 # Dependency directories
 /node_modules
 .npm
+
+# Logs and extra files
+npm-debug.log*
+.idea
+.DS_Store
