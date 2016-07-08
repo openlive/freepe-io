@@ -1,0 +1,29 @@
+{
+  "development": {
+    "db": {
+      "name": "freepe",
+      "host": "localhost",
+      "port": 2424,
+      "username": "root",
+      "password": "root"
+    }
+  },
+  "test": {
+    "db": {
+      "name": "freepe",
+      "host": "localhost",
+      "port": 2424,
+      "username": "root",
+      "password": "root"
+    }
+  },
+  "production": {
+    "db": {
+      "name": "freepe",
+      "host": "localhost",
+      "port": 2424,
+      "username": "root",
+      "password": "root"
+    }
+  }
+}
