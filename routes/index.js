@@ -18,22 +18,6 @@ module.exports.init = function (app) {
     app.use('/api', api);
     app.use('/admin', backend);
 
-    app.post('/register',
-        function(req, res){
-            res.render('login');
-        });
-
-    app.post('/login',
-        passport.authenticate('local', { failureRedirect: '/login' }),
-        function(req, res) {
-            res.redirect('/');
-        });
-
-    app.get('/logout',
-        function(req, res){
-            req.logout();
-            res.redirect('/');
-        });
     // catch 404 and forward to error handler
     app.use(err404Handler.handle);
     // error handlers
