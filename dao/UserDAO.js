@@ -1,9 +1,9 @@
 /**
  * Created by koc9n on 4/9/16.
  */
-var db = require('../models');
-var User = db.models.user;
+"use strict";
+var oDB = require('../models');
 
 module.exports.findAll = function () {
-    return User.find();
+    return oDB.models.user.find();
 };
