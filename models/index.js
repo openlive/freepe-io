@@ -16,48 +16,65 @@ var env = process.env.NODE_ENV || "dev";
 var config = require(path.join(__dirname, '..', 'configs', 'config.json'))[env];
 var entitiesDir = path.join(__dirname, './entities');
 
-var orm = new Waterline();
-var orientDB = {};
-var config = {
+function DB() {
+    var self = this;
 
-    adapters: {
-        'default': orientAdapter,
-        orient: orientAdapter,
-    },
+    self.orm = !self.orm ? new Waterline() : self.orm;
+    self.db = null;
+    self.config = {
 
-    connections: {
-        myLocalOrient: {
-            adapter: 'orient',
-            host: process.env.DB_HOST || 'localhost',
-            port: process.env.DB_PORT || 2424,
-            user: process.env.DB_USER || 'root',
-            password: process.env.DB_PASSWORD || 'root',
-            database: process.env.DB_NAME || 'freepe'
+        adapters: {
+            'default': orientAdapter,
+            orient: orientAdapter,
+        },
+
+        connections: {
+            myLocalOrient: {
+                adapter: 'orient',
+                host: process.env.DB_HOST || 'localhost',
+                port: process.env.DB_PORT || 2424,
+                user: process.env.DB_USER || 'root',
+                password: process.env.DB_PASSWORD || 'root',
+                database: process.env.DB_NAME || 'freepe'
+            }
+        },
+
+        defaults: {
+            migrate: 'drop' // or 'alter' or 'safe'
         }
-    },
 
-    defaults: {
-        migrate: 'drop' // or 'alter' or 'safe'
-    }
+    };
 
+    self.init = function (next) {
+        var self = this;
+        if (!self.db) {
+            fs
+                .readdirSync(entitiesDir)
+                .forEach(function (file) {
+                    var entity = require(path.join(entitiesDir, file));
+                    entity.connection = Object.keys(self.config.connections)[0];
+                    entity.tableName = file.substring(0, file.indexOf('.'));
+                    self.orm.loadCollection(Waterline.Collection.extend(entity));
+                });
+
+            self.orm.initialize(self.config, function (err, models) {
+                if (err) throw err;
+                self.db= {};
+                self.db.models = models.collections;
+                self.db.connections = models.connections;
+                console.log('initialized DB');
+                next();
+            });
+        } else {
+            next();
+        }
+    };
+
+    return self;
 };
 
-fs
-    .readdirSync(entitiesDir)
-    .forEach(function (file) {
-        var entity = require(path.join(entitiesDir, file));
-        entity.connection = Object.keys(config.connections)[0];
-        entity.tableName = file.substring(0, file.indexOf('.'));
-        orm.loadCollection(Waterline.Collection.extend(entity));
-    });
+module.exports = new DB();
 
-module.exports = orientDB;
 
-module.exports.init = function (next) {
-    orm.initialize(config, function(err, models) {
-        if(err) throw err;
-        orientDB.models = models.collections;
-        orientDB.connections = models.connections;
-        next();
-    });
-};
+
+

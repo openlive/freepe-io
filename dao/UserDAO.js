@@ -5,5 +5,5 @@
 var oDB = require('../models');
 
 module.exports.findAll = function () {
-    return oDB.models.user.find();
+    return oDB.db.models.user.find();
 };
