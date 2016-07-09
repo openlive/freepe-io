@@ -13,7 +13,7 @@
     angular.module('freepe', [
 
         // Freepe modules
-        'LandingMod', 'DashboardMod',
+        'LandingMod', 'DashboardMod', 'ProductMod', 'ResourceMod', 'UserMod', 'OrganizationMod',
 
         // Vendor modules
         'ui.router'

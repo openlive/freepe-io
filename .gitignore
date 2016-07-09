@@ -5,9 +5,9 @@ npm-debug.log*
 # Database directories
 /opt/orientdb-community-2.2.0/bin/orient.pid
 /opt/orientdb-community-2.2.0/log
+/opt
 
 # Dependency directories
 /node_modules
 /public/bower_components
 .npm
-/opt
