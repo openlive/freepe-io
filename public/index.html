@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="freepe">
+<head>
+    <title ng-cloak>Freepe</title>
+
+    <base href="/">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+
+    <div ui-view></div>
+
+    <!-- Freepe modules -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+
+    <script type="text/javascript" src="scripts/landing/LandingMod.js"></script>
+    <script type="text/javascript" src="scripts/landing/components/Landing.js"></script>
+
+    <script type="text/javascript" src="scripts/dashboard/DashboardMod.js"></script>
+    <script type="text/javascript" src="scripts/dashboard/components/Dashboard.js"></script>
+
+    <!-- Vendor libraries -->
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+</body>
+</html>

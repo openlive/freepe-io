@@ -8,5 +8,6 @@ npm-debug.log*
 
 # Dependency directories
 /node_modules
+/public/bower_components
 .npm
 /opt

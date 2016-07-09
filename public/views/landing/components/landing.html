@@ -1,0 +1,38 @@
+<header>
+    <div class="head-container">
+        <div class="head-logo"><img src="img/logo-3.png" alt="logo"/></div>
+        <div class="head-button">
+            <button class="log">Вход</button>
+            <div class="auth">
+                <input type="login" placeholder="Login" >
+                <input type="password" placeholder="Password" >
+                <button>Войти</button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="slogan">
+        <p class="slogan-text">FreePe - проект, </br> который изменит </br> вашу жизнь!</p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KNnJxonaQgE" class="yo" frameborder="0" allowfullscreen></iframe>
+    <div class="email">
+        <div class="email-container">
+            <span>Станьте первыми, кто узнает!</span> <br/>
+            <input type="text" size="30" placeholder="Email адрес">
+            <input type="submit" value="Узнать больше">
+        </div>
+    </div>
+</div>
+
+<script>
+    $( document ).ready(function() {
+        $('.log').click(function () {
+            if($('.auth').css('display') == 'none'){
+                $('.auth').slideDown();
+            } else {
+                $('.auth').slideUp();
+            }
+        });
+    });
+</script>
