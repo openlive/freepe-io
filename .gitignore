@@ -9,4 +9,4 @@ npm-debug.log*
 # Dependency directories
 /node_modules
 .npm
-opt
+/opt
