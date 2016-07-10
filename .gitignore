@@ -3,9 +3,8 @@ npm-debug.log*
 .idea
 
 # Database directories
-/opt/orientdb-community-2.2.0/bin/orient.pid
-/opt/orientdb-community-2.2.0/log
-/opt
+
+
 
 # Dependency directories
 /node_modules
