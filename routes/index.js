@@ -2,7 +2,8 @@
 
 var express = require('express');
 var frontend = require('./frontend');
-var backend = require('./backend');
+var dashboard = require('./dashboard');
+var auth = require('./auth');
 var api = require('./api');
 
 /**
@@ -16,8 +17,8 @@ var err500Handler = require('../handlers/err500Handler');
 module.exports.init = function (app) {
     app.use("/", frontend);
     app.use('/api', api);
-    app.use('/admin', backend);
-
+    app.use('/dashboard', dashboard);
+    app.use('/auth', auth);
     // catch 404 and forward to error handler
     app.use(err404Handler.handle);
     // error handlers

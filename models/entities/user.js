@@ -4,8 +4,7 @@ var User = {
     profileUrl  : { type: 'link'},
     email     : { type: 'email',  unique: true },
     passports : { collection: 'Passport', via: 'user' },
-    photos    : { type: 'array'},
-    name      : { type: 'object', unique: true }
+    photos    : { type: 'array'}
   }
 };
 

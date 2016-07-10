@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
 
 /**
  * include routes
@@ -27,6 +28,9 @@ app.use(require('express-session')({ secret: 'freepe s3cr3t', resave: true, save
 // view engine setup
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+app.disable('view cache');
+app.use(passport.initialize());
+app.use(passport.session());
 
 /**
  *  Routes for <freepe>
