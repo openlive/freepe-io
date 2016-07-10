@@ -3,7 +3,7 @@
  */
 
 angular.module('ResourceMod').component('resourcesList', {
-    templateUrl: 'views/resource/components/resources-list.html',
+    templateUrl: 'views/resource/components/resource_list.html',
     controller: ResourcesListController
 });
 

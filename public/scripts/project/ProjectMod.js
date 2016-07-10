@@ -20,14 +20,14 @@
         var states = [
             {
                 name       : 'product',
-                url        : '/product',
-                template   : '<product></product>'
+                url        : '/project',
+                template   : '<project></project>'
             },
 
             {
                 name       : 'productList',
                 url        : '/productList',
-                template   : '<product-list></product-list>'
+                template   : '<project-list></project-list>'
             }
         ];
 

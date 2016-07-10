@@ -1,3 +1,15 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FreePe.IO</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
 <header>
     <div class="container">
         <a class="logo" href="/">
@@ -5,7 +17,6 @@
         </a>
         <span>Социально-экономическая платформа</span>
         <nav>
-            <a href="#">поиск</a>
             <a href="#">помощь</a>
             <a href="#">выйти</a>
         </nav>
@@ -16,137 +27,120 @@
     <div class="site_bar">
         <nav>
             <ul>
-                <li class="home"><a href="#">Моя страница</a><a href="#" class="edit">ред.</a></li>
-                <li><a href="#">Новости</a><span>1</span></li>
-                <li><a href="#">Сообщения</a><span>1</span></li>
-                <li><a href="#">Люди</a></li>
-                <li><a href="#">Сообщества</a></li>
-                <li><a href="#">Ресурсы</a></li>
-                <li><a href="#">Навыки</a></li>
-                <li><a href="#">Идеи</a></li>
-                <li><a href="#" class="active">Проекты</a></li>
-                <li><a href="#">Организации</a></li>
-                <li><a href="#">Приложения</a></li>
+                <li class="home"><a href="user.html">Моя страница</a><a href="#" class="edit">ред.</a></li>
+                <li><a href="dashboard.html">Личный кабинет</a></li>
+                <li><a href="resource_list.html">Ресурсы</a></li>
+                <li><a href="project_list.html">Проекты</a></li>
+                <li><a href="organization_list.html" class="active">Организации</a></li>
             </ul>
             <ul>
-                <li><a href="#">Настройки</a></li>
-                <li><a href="#">Диск</a></li>
-                <li><a href="#">Связи</a></li>
-                <li><a href="#">Знания</a></li>
+                <li><a href="#">Сообщения</a></li>
+                <li><a href="#">Люди</a></li>
+                <li><a href="#">Навыки</a></li>
                 <li><a href="#">Достижения</a></li>
-                <li><a href="#">Заметки</a></li>
-                <li><a href="#">ЖКХ</a></li>
+                <li><a href="#">Сообщества</a></li>
                 <li><a href="#">Предложения</a></li>
+                <li><a href="#">Знания</a></li>
+                <li><a href="#">Идеи</a></li>
+                <li><a href="#">Связи</a></li>
+                <li><a href="#">Заметки</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">ЖКХ</a></li>
+                <li><a href="#">Диск</a></li>
+                <li><a href="#">Настройки</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="content clearfix">
-        <nav class="general_nan">
-            <a href="#" class="active">О ресурсе</a>
-            <a href="#">Трекинг</a>
-            <a href="#">Покупатели</a>
-            <a href="#">Отзывы</a>
-            <a href="#" class="pottle"></a>
-            <a href="#" class="star"></a>
-        </nav>
         <div class="add_project_line">
             <input type="text" placeholder="Начните вводить имя или название">
-            <button class="btn">Добавить ресурс</button>
+            <button class="btn">Добавить организацию</button>
         </div>
         <div class="projects-wrapper">
             <div class="projects-block">
-                <h4>Новые проекты</h4>
+                <h4>Деловые</h4>
                 <div class="projects-block__wrapper">
-                    <a href="#" class="projects-block__item">
+                    <a href="organization.html" class="projects-block__item">
                         <div>
-                            <b>98%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
                         <div class="city">Москва</div>
-                        <p>Строительный <br> 3д принтер</p>
+                        <p>ООО "Мириталь"</p>
                     </a>
 
                     <a href="#" class="projects-block__item">
                         <div>
-                            <b>74%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
                         <div class="city">Красноярск</div>
-                        <p>Биовегетарий</p>
+                        <p>Ресторан <br> "Красная звезда"</p>
                     </a>
 
                     <a href="#" class="projects-block__item">
                         <div>
-                            <b>86%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
-                        <div class="city">Санкт-Петербург</div>
-                        <p>Антикафе <br> «FabLab»</p>
+                        <div class="city">Полтава</div>
+                        <p>Кооператив "FreePe"</p>
                     </a>
                 </div>
             </div>
 
             <div class="projects-block">
-                <h4>Самые посещаемые проекты</h4>
+                <h4>Общественные</h4>
                 <div class="projects-block__wrapper">
                     <a href="#" class="projects-block__item">
                         <div>
-                            <b>98%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
                         <div class="city">Москва</div>
-                        <p>Строительный <br> 3д принтер</p>
+                        <p>Государственная <br> библиотека</p>
                     </a>
 
                     <a href="#" class="projects-block__item">
                         <div>
-                            <b>74%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
-                        <div class="city">Красноярск</div>
-                        <p>Биовегетарий</p>
+                        <div class="city">Москва</div>
+                        <p>МГУ</p>
                     </a>
 
                     <a href="#" class="projects-block__item">
                         <div>
-                            <b>86%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
-                        <div class="city">Санкт-Петербург</div>
-                        <p>Антикафе <br> «FabLab»</p>
+                        <div class="city">Днепропетровск</div>
+                        <p>Детский сад</p>
                     </a>
                 </div>
             </div>
 
             <div class="projects-block">
-                <h4>Космос</h4>
+                <h4>Ассоциативные</h4>
                 <div class="projects-block__wrapper">
                     <a href="#" class="projects-block__item">
                         <div>
-                            <b>98%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
-                        <div class="city">Москва</div>
-                        <p>Строительный <br> 3д принтер</p>
+                        <div class="city">Владивосток</div>
+                        <p>Группа любителей <br> активного отдыха</p>
                     </a>
 
                     <a href="#" class="projects-block__item">
                         <div>
-                            <b>74%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
-                        <div class="city">Красноярск</div>
-                        <p>Биовегетарий</p>
+                        <div class="city">Ялта</div>
+                        <p>Кружок по вышиванию</p>
                     </a>
 
                     <a href="#" class="projects-block__item">
                         <div>
-                            <b>86%</b>
                             <img src="img/ava_cap.jpg" alt="">
                         </div>
-                        <div class="city">Санкт-Петербург</div>
-                        <p>Антикафе <br> «FabLab»</p>
+                        <div class="city">Севастополь</div>
+                        <p>Объединение горожан</p>
                     </a>
                 </div>
             </div>
@@ -169,7 +163,11 @@
             <a href="#">помощь</a>
             <a href="#">правила</a>
             <a href="#">разработчикам</a>
-            <a href="#">вакансии</a>
         </nav>
     </footer>
 </div>
+<script src="js/main.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>

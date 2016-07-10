@@ -3,7 +3,7 @@
  */
 
 angular.module('ProductMod').component('product', {
-    templateUrl: 'views/product/components/product.html',
+    templateUrl: 'views/project/components/project.html',
     controller: ProductController
 });
 
