@@ -20,7 +20,7 @@
         var states = [
             {
                 name       : 'landing',
-                url        : '/landing',
+                url        : '/',
                 template   : '<landing></landing>'
             }
         ];

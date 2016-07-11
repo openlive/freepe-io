@@ -8,6 +8,6 @@ $ npm install
 $ bower install
 
 #Run
-$ ./opt/orientdb-community-2.2.0/bin/server.sh
+$ ./opt/orientdb-community-2.2.3/bin/server.sh
 
 $ npm start

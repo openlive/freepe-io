@@ -13,7 +13,7 @@ var config = require('../configs/config.json');
 /**
  * Get port from environment and store in Express.
  */
-var port = normalizePort(process.env.PORT || '80');
+var port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
 
 /**
@@ -22,11 +22,11 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
-oDB.init(function () {
+//oDB.init(function () {
     server.listen(port);
     server.on('error', onError);
     server.on('listening', onListening);
-});
+//});
 
 
 /**
