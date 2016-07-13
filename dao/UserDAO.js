@@ -3,6 +3,6 @@
  */
 "use strict";
 
-module.exports.findAll = function () {
+exports.findAll = function () {
     return User.find();
 };

@@ -108,4 +108,4 @@ var Passport = {
     }
 };
 
-module.exports = Passport;
+exports = Passport;

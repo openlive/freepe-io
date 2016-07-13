@@ -11,4 +11,4 @@ var User = {
     }
 };
 
-module.exports = User;
+exports = User;
