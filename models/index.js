@@ -59,9 +59,15 @@ function DB() {
 
             self.orm.initialize(self.config, function (err, models) {
                 if (err) throw err;
-                self.db= {};
+                self.db = {};
                 self.db.models = models.collections;
                 self.db.connections = models.connections;
+
+                for (var i in self.db.models) {
+                    global[self.db.models[i].tableName] = self.db.models[i];
+                    console.log('Added to Global Table <' + self.db.models[i].tableName + ">");
+                }
+
                 console.log('initialized DB');
                 next();
             });
