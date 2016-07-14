@@ -1,7 +1,6 @@
 /**
  * Created by koc9n on 4/9/16.
  */
-var express = require('express');
 /**
  * internal error handler
  */

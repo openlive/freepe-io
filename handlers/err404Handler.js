@@ -1,7 +1,6 @@
 /**
  * Created by koc9n on 4/9/16.
  */
-var express = require('express');
 module.exports.handle = function (req, res, next) {
     console.log("|| used 404 error handler ||");
     var err = {message: "Not found", status: 404};

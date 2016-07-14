@@ -79,7 +79,7 @@ function DB() {
     return self;
 };
 
-exports = new DB();
+module.exports = new DB();
 
 
 

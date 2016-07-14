@@ -5,13 +5,9 @@ var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var validator = require('validator');
 var crypto = require('crypto');
-var oDB = require('../models');
 
 passport.loginUser = function (req, identifier, password, next) {
-    console.log(identifier);
-    console.log(password);
-    console.log(next);
-    console.log("---")
+
     var isEmail = validator.isEmail(identifier)
         , query = {};
 
@@ -22,7 +18,7 @@ passport.loginUser = function (req, identifier, password, next) {
         query.username = identifier;
     }
 
-    oDB.db.models.user.findOne(query)
+    User.findOne(query)
         .populate('passports')
         .exec(function (err, user) {
             if (err) {
@@ -39,7 +35,7 @@ passport.loginUser = function (req, identifier, password, next) {
                 return next(null, false);
             }
 
-            oDB.db.models.passport.findOne({
+            Passport.findOne({
                 protocol: 'local',
                 user: user.id
             }).populate('user')
@@ -76,7 +72,7 @@ passport.serializeUser(function (user, cb) {
 });
 
 passport.deserializeUser(function (id, cb) {
-    oDB.db.models.user.findById(id, function (err, user) {
+    User.findById(id, function (err, user) {
         if (err) {
             return cb(err);
         }
@@ -101,7 +97,7 @@ passport.register = function (req, res, next) {
         return next(new Error('No password was entered.'));
     }
 
-    oDB.db.models.user.create(
+    User.create(
         {
             username: username,
             email: email
@@ -123,7 +119,7 @@ passport.register = function (req, res, next) {
             // Generating accessToken for API authentication
             var token = crypto.randomBytes(48).toString('base64');
 
-            oDB.db.models.passport.create({
+            Passport.create({
                 protocol: 'local'
                 , password: password
                 , user: user.id
@@ -139,7 +135,7 @@ passport.register = function (req, res, next) {
                     });
                 }
 
-                oDB.db.models.user.findOne(user.id).populate('passports').exec(next);
+                User.findOne(user.id).populate('passports').exec(next);
             });
         });
 };
