@@ -1,5 +1,5 @@
-# freepe
-Promo webapp
+# Freepe IO Promo
+Crowd-platform with custom tokens and referral system
 
 #Setup
 Install OrientDB http://orientdb.com/docs/master/Tutorial-Installation.html
