@@ -1,4 +1,4 @@
-# Freepe IO Promo
+# Freepe IO
 Crowd-platform with custom tokens and referral system
 
 #Setup
