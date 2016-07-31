@@ -3,32 +3,50 @@
 <head>
     <title ng-cloak>Freepe</title>
 
-    <base href="/">
+    <base href="/#/">
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/landing.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/settings.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/vendor/ngtoast/dist/ngToast.css">
+    <style scoped>
+        .alert {
+            margin:0 !important;
+            padding:5px !important;
+            width:100% !important;
+            text-align: center !important;
+        }
 
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        .ng-toast, .ng-toast .ng-toast__list {
+            position:relative !important;
+            margin:0 !important;
+            width:100% !important;
+        }
+    </style>
+
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/angular-cookies/angular-cookies.js"></script>
+    <script src="/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/vendor/ngToast/dist/ngToast.js"></script>
+
 </head>
 <body>
+<toast></toast>
 
 {{{body}}}
 
 <!-- Freepe modules -->
 <script type="text/javascript" src="scripts/app.js"></script>
-
 <script type="text/javascript" src="scripts/landing/LandingMod.js"></script>
 <script type="text/javascript" src="scripts/landing/components/Landing.js"></script>
 
 <script type="text/javascript" src="scripts/dashboard/DashboardMod.js"></script>
 <script type="text/javascript" src="scripts/dashboard/components/Dashboard.js"></script>
 
-<script type="text/javascript" src="scripts/product/ProductMod.js"></script>
-<script type="text/javascript" src="scripts/product/components/Product.js"></script>
-<script type="text/javascript" src="scripts/product/components/ProductList.js"></script>
+<script type="text/javascript" src="scripts/project/ProjectMod.js"></script>
+<script type="text/javascript" src="scripts/project/components/Project.js"></script>
+<script type="text/javascript" src="scripts/project/components/ProjectList.js"></script>
 
 <script type="text/javascript" src="scripts/resource/ResourceMod.js"></script>
 <script type="text/javascript" src="scripts/resource/components/Resource.js"></script>
@@ -40,11 +58,18 @@
 <script type="text/javascript" src="scripts/organization/OrganizationMod.js"></script>
 <script type="text/javascript" src="scripts/organization/components/Organization.js"></script>
 
-<!-- Vendor libraries -->
-<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="scripts/register/RegisterMod.js"></script>
+<script type="text/javascript" src="scripts/register/components/Register.js"></script>
 
-<!-- Misc files -->
-<script src="scripts/main.js"></script>
+<script type="text/javascript" src="scripts/login/LoginMod.js"></script>
+<script type="text/javascript" src="scripts/login/components/Login.js"></script>
+
+<script type="text/javascript" src="scripts/services/CookieSrvc.js"></script>
+<script type="text/javascript" src="scripts/services/HttpSrvc.js"></script>
+<script type="text/javascript" src="scripts/services/ToasterSrvc.js"></script>
+<script type="text/javascript" src="scripts/services/AuthSrvc.js"></script>
+
+
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 </body>

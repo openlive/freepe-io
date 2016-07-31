@@ -2,11 +2,11 @@
  * @author Max Budnyk <maxbudnik64@gmail.com>
  */
 
-angular.module('ProductMod').component('product', {
+angular.module('ProjectMod').component('project', {
     templateUrl: 'views/project/components/project.html',
-    controller: ProductController
+    controller: ProjectController
 });
 
-function ProductController($scope, $element, $attrs) {
+function ProjectController($scope, $element, $attrs) {
     var ctrl = this;
 }

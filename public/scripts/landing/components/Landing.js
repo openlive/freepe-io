@@ -7,6 +7,6 @@ angular.module('LandingMod').component('landing', {
     controller: LandingController
 });
 
-function LandingController($scope, $element, $attrs) {
+function LandingController($rootScope, $scope, $element, $attrs, AuthSrvc) {
     var ctrl = this;
 }

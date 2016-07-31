@@ -10,7 +10,7 @@
      * @description
      * Freepe product page functionality and related logic.
      */
-    angular.module('ProductMod', ['ui.router'])
+    angular.module('ProjectMod', ['ui.router'])
         .config(configStates);
     /**
      * @ngInject
@@ -19,14 +19,14 @@
     function configStates ($stateProvider) {
         var states = [
             {
-                name       : 'product',
+                name       : 'project',
                 url        : '/project',
                 template   : '<project></project>'
             },
 
             {
-                name       : 'productList',
-                url        : '/productList',
+                name       : 'projectList',
+                url        : '/projectList',
                 template   : '<project-list></project-list>'
             }
         ];

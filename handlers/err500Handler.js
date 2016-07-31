@@ -18,9 +18,6 @@ module.exports.handle = function (err, req, res, next) {
     if (req.xhr) {
         return res.json(result);
     } else {
-        if (err.status) {
-            return res.render(err.status, result);
-        }
-
+        return res.render("error", result);
     }
 };

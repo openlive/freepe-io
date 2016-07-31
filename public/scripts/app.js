@@ -12,11 +12,26 @@
      */
     angular.module('freepe', [
 
-        // Freepe modules
-        'LandingMod', 'DashboardMod', 'ProductMod', 'ResourceMod', 'UserMod', 'OrganizationMod',
+            // Freepe modules
+            'LandingMod',
+            'DashboardMod',
+            'ProjectMod',
+            'ResourceMod',
+            'UserMod',
+            'OrganizationMod',
+            'RegisterMod',
+            'LoginMod',
 
-        // Vendor modules
-        'ui.router'
+            // Vendor modules
+            'ui.router',
+            'ngToast',
+            'ngCookies'
 
-    ]);
+        ])
+        .config(['$httpProvider', function ($httpProvider) {
+            $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+        }])
+        .run(function ($state) {
+            $state.go('landing');
+        });
 })();

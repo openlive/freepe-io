@@ -4,9 +4,12 @@
 
 angular.module('DashboardMod').component('dashboard', {
     templateUrl: 'views/dashboard/components/dashboard.html',
-    controller: LandingController
+    controller: DashboardController
 });
 
-function LandingController($scope, $element, $attrs) {
+function DashboardController($scope, $element, $attrs, AuthSrvc) {
     var ctrl = this;
+    $scope.logout = function() {
+        AuthSrvc.logout();
+    }
 }

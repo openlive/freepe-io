@@ -8,8 +8,8 @@ var AuthCtrl = require('../../controllers/AuthCtrl');
 
 router.post("/login", AuthCtrl.login);
 
-router.post("/register", AuthCtrl.register);
+router.put("/register", AuthCtrl.register);
 
-router.get('logout', AuthCtrl.logout);
+router.delete('/logout', AuthCtrl.logout);
 
 module.exports = router;
